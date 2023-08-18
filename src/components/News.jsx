@@ -31,19 +31,9 @@ const News = (props) => {
 	}
 
 	useEffect(() => {
-		updateNews();
+		updateNews(); // eslint-disable-next-line
 	}, []);
 
-
-	const previousClick = async () => {
-		await setPage(page - 1);
-		updateNews();
-	}
-
-	const nextClick = async () => {
-		await setPage(page + 1);
-		updateNews();
-	}
 
 	const fetchMoreData = async () => {
 		props.setProgress(0);
