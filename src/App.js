@@ -23,7 +23,7 @@ export default class App extends Component {
   }
   render() {
     return (
-      <div>
+      <>
         <BrowserRouter>
             <Navbar />
             <LoadingBar 
@@ -41,7 +41,7 @@ export default class App extends Component {
             <Route path='/health' element={<News setProgress={this.setProgress} apiKey={this.apiKey} key="health" pageSize={this.pageSize} country="in" category="health" />}></Route>
           </Routes>
         </BrowserRouter>
-      </div>
+      </>
     )
   }
 }
